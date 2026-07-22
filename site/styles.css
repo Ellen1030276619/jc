@@ -142,6 +142,7 @@ h1 {
 }
 
 .vision-overlay {
+  --hole-radius: min(23vw, 45vh);
   position: fixed;
   z-index: 2;
   inset: 0;
@@ -151,12 +152,12 @@ h1 {
   opacity: 0;
   transition: opacity 420ms ease, visibility 0s linear 420ms;
   -webkit-mask-image:
-    radial-gradient(ellipse 22vw 39vh at 26% 50%, transparent 0 96%, #000 100%),
-    radial-gradient(ellipse 22vw 39vh at 74% 50%, transparent 0 96%, #000 100%);
+    radial-gradient(circle var(--hole-radius) at 25% 50%, transparent 0 96%, #000 100%),
+    radial-gradient(circle var(--hole-radius) at 75% 50%, transparent 0 96%, #000 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    radial-gradient(ellipse 22vw 39vh at 26% 50%, transparent 0 96%, #000 100%),
-    radial-gradient(ellipse 22vw 39vh at 74% 50%, transparent 0 96%, #000 100%);
+    radial-gradient(circle var(--hole-radius) at 25% 50%, transparent 0 96%, #000 100%),
+    radial-gradient(circle var(--hole-radius) at 75% 50%, transparent 0 96%, #000 100%);
   mask-composite: intersect;
 }
 
@@ -214,15 +215,6 @@ h1 {
 
   h1 {
     font-size: clamp(2.35rem, 12vw, 3.2rem);
-  }
-
-  .vision-overlay {
-    -webkit-mask-image:
-      radial-gradient(ellipse 22vw 37vh at 26% 49%, transparent 0 96%, #000 100%),
-      radial-gradient(ellipse 22vw 37vh at 74% 49%, transparent 0 96%, #000 100%);
-    mask-image:
-      radial-gradient(ellipse 22vw 37vh at 26% 49%, transparent 0 96%, #000 100%),
-      radial-gradient(ellipse 22vw 37vh at 74% 49%, transparent 0 96%, #000 100%);
   }
 
   .escape-hint {
